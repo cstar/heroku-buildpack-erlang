@@ -44,6 +44,10 @@ ${ERLROOT}/Install -minimal /app/otp
 PATH=/app/otp/bin:$PATH
 export PATH
 
+mkdir -p ${cache}/deps
+
+ln -sf ${cache}/deps $build/deps
+
 cd $build
 
 if [ ! -e "rebar" ]; then
